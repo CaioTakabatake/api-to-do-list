@@ -14,6 +14,10 @@ public class Todo {
     @Column(nullable = false)
     private StatusEnum status = StatusEnum.NOT_STARTED;
 
+    public Todo() {
+        // Construtor padrão sem argumentos
+    }
+
     public Todo(String title, String description) {
         this.title = title;
         this.description = description;
