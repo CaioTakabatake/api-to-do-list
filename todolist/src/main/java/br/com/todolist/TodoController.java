@@ -22,13 +22,11 @@ public class TodoController {
 
     @GetMapping
     public List<Todo> getAllTodos() {
-        System.out.println(todoService.getAllTodos());
         return todoService.getAllTodos();
     }
 
     @GetMapping("/{id}")
     public Optional<Todo> getTodo(@PathVariable Integer id) {
-        System.out.println(todoService.getTodoById(id));
         return todoService.getTodoById(id);
     }
 
@@ -39,7 +37,6 @@ public class TodoController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Map<String, String>> deleteTodo(@PathVariable Integer id) {
-        System.out.println(id);
         todoService.deleteTodoById(id);
         Map<String, String> response = new HashMap<>();
         response.put("message", "Tarefa excluída com sucesso.");
