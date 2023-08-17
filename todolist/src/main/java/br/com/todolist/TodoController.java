@@ -23,7 +23,6 @@ public class TodoController {
 
     @PostMapping
     public Todo createTodo(@RequestBody Todo todo) {
-        System.out.println("aaa");
         return todoService.createTodo(todo);
     }
 }
